@@ -55,13 +55,13 @@
 
 <!-- Row 1: Languages & Overall Stats -->
 <p align="center">
-  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=chenoff&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F0FF&text_color=9CA3AF" alt="Most Used Languages" />
+  <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ch3nOff&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F0FF&text_color=9CA3AF" alt="Most Used Languages" />
   <img height="160em" src="https://github-readme-stats.vercel.app/api?username=chenoff&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=00F0FF&icon_color=00F0FF&text_color=9CA3AF" alt="GitHub Stats" />
 </p>
 
 <!-- Row 2: Streak Card + Animated Hacker Illustration (Seperti di referensi) -->
 <p align="center">
-  <img height="175em" src="https://github-readme-streak-stats.herokuapp.com/?user=chenoff&theme=tokyonight&hide_border=true&background=0D1117&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF" alt="GitHub Streak" />
+  <img height="175em" src="https://github-readme-streak-stats.herokuapp.com/?user=Ch3nOff&theme=tokyonight&hide_border=true&background=0D1117&ring=00F0FF&fire=00F0FF&currStreakLabel=00F0FF" alt="GitHub Streak" />
   <img height="175em" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Coding GIF" />
 </p>
 
