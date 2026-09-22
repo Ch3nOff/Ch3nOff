@@ -55,9 +55,9 @@ print(me.motto)
 <div align="center">
   <h2>📈 GitHub Stats</h2>
   <a href="https://github.com/Ch3nOff">
-    <img src="https://github-readme-stats.vercel.app/api?username=Ch3nOff&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="Matthew's GitHub Stats" />
+    <img src="https://github-readme-stats-kappa-six.vercel.app/api?username=Ch3nOff&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="Matthew's GitHub Stats" />
   </a>
   <a href="https://github.com/Ch3nOff">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ch3nOff&layout=compact&theme=tokyonight&hide_border=true" alt="Matthew's Top Languages" />
+    <img src="https://github-readme-stats-kappa-six.vercel.app/api/top-langs/?username=Ch3nOff&layout=compact&theme=tokyonight&hide_border=true" alt="Matthew's Top Languages" />
   </a>
 </div>
