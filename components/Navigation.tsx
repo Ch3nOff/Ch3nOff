@@ -52,7 +52,7 @@ export default function Navigation() {
   const navItems = [
     { name: 'INDEX', href: '/' },
     { name: 'ESSAYS', href: '/#essays' },
-    { name: 'ARTIFACTS', href: '/artifacts' },
+    { name: 'ARTIFACTS', href: '/#artifacts' },
     { name: 'MANIFESTO', href: '/manifesto' },
     { name: 'ARCHIVE', href: '/archive' },
     { name: 'NOTES', href: '/notes' },
