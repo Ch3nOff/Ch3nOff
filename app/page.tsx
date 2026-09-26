@@ -205,7 +205,7 @@ export default function HomePage() {
       {/* ───────────────────────────────────────────────────────────
           03. PUBLISHED ARTIFACTS, PACKAGES & REPOSITORIES
          ─────────────────────────────────────────────────────────── */}
-      <section className="space-y-8">
+      <section id="artifacts" className="space-y-8 scroll-mt-24">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between border-b-2 border-ink-dark dark:border-paper-50 pb-4 gap-2">
           <div>
             <span className="text-[10px] font-mono text-accent uppercase tracking-widest">
