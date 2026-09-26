@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.DS_Store
+*.local
+.env
+.env*.local
+artifacts/
+agent_sandbox/
+.gemini/
+
+*.log
