@@ -109,61 +109,8 @@ export const articles: Article[] = [
   },
   {
     id: "art-02",
-    slug: "the-physics-of-the-slap-bass-and-recursive-code",
-    number: "02",
-    title: "The Acoustic Leverage of Slap Bass and Recursive Code",
-    subtitle: "Thumb pivots, 16th-note ghost notes, and why timing jitter destroys both funk pockets and control loops.",
-    date: "2026-08-30",
-    year: "2026",
-    readingTime: "5 min read",
-    category: "Music & Systems",
-    mood: "Rhythmic",
-    type: "essay",
-    excerpt: "Slapping a bass guitar isn't musical showmanship; it is an exercise in tactile kinetic impulse. You strike the metal fret with the bone of your thumb, recoil instantly, and leave silence for the snare.",
-    previewImagePrompt: "Cross-section schematic of a steel bass string vibrating against a nickel fret wire, with timing oscilloscope curves.",
-    chapters: [
-      { id: "the-percussive-bone", title: "I. The Percussive Bone" },
-      { id: "ghost-notes-as-state-machines", title: "II. Ghost Notes as State Machines" },
-      { id: "phase-coherence-in-grooves-and-loops", title: "III. Phase Coherence in Grooves and Loops" }
-    ],
-    footnotes: [
-      { id: 1, text: "A roundwound steel string against a jumbo nickel-silver fret produces a transient spike in the 2.5kHz - 4kHz range within 1.2 milliseconds of impact." },
-      { id: 2, text: "Ghost notes (dead notes) contain almost no pitch fundamental, acting strictly as rhythmic impulse markers." }
-    ],
-    content: {
-      leadParagraph: "Most people view playing an instrument as an emotional endeavor. To me, slapping a bass guitar feels nearly identical to writing a low-level interrupt handler. If your hand lingers on the string for even three milliseconds too long, the harmonic is choked. If your thumb strikes at an angle off by five degrees, the percussive transient dissolves into muddy flub.",
-      sections: [
-        {
-          heading: "I. The Percussive Bone",
-          body: [
-            "Watch Marcus Miller or Victor Wooten closely. Their thumbs don't muscle through the string; they treat the knuckle like a spring-loaded hammer. You don't push into the instrument — you whip against it, bouncing off the steel so that the string's kinetic amplitude is transferred cleanly into the pickup magnets.",
-            "In control systems, we call this critical damping. An underdamped thumb rings uncontrollably, creating unwanted sympathetic resonance on the adjacent D and G strings. An overdamped thumb suffocates the attack."
-          ],
-          marginNote: "The instrument never lies about kinetic sloppy posture.",
-          pullQuote: "Funk does not live in the notes you strike; it lives in the surgical precision of the silence you leave behind."
-        },
-        {
-          heading: "II. Ghost Notes as State Machines",
-          body: [
-            "The heart of a legitimate funk groove is never the downbeat root note. It is the muted 'chuck' — the ghost note. Left fingers rest loosely on the fretboard without pressing to the wood, while the right hand plucks.",
-            "In a state machine, ghost notes are clock cycles where state does not mutate, but synchronization is maintained. Without them, the groove drifts. The listener feels anxious without understanding why: the system has accumulated micro-jitter."
-          ]
-        },
-        {
-          heading: "III. Phase Coherence in Grooves and Loops",
-          body: [
-            "When I wrote the feedback loop for my dual-loop PID library, I noticed the exact same mathematical phenomenon. If the differential term kicks in 2 milliseconds late relative to the velocity error, the robotic actuator stutters.",
-            "Whether you are aligning a stepper motor's PWM duty cycle or locking in with an acoustic drummer at 112 BPM, phase coherence is the only thing standing between pure musical momentum and catastrophic oscillation."
-          ],
-          marginNote: "Music and robotics are just two dialects of applied physics."
-        }
-      ]
-    }
-  },
-  {
-    id: "art-03",
     slug: "building-dual-loop-controller",
-    number: "03",
+    number: "02",
     title: "Notes on Shipping dual-loop-controller to PyPI: When Math Beats Heuristics",
     subtitle: "Why standard single-loop PID explodes under abrupt load shifts, and how cascaded loops tame the physical world.",
     date: "2026-09-24",
@@ -230,61 +177,9 @@ export const articles: Article[] = [
     }
   },
   {
-    id: "art-04",
-    slug: "minecraft-servers-are-distributed-systems",
-    number: "04",
-    title: "Minecraft Servers Are Actually Battle-Tested Distributed Systems",
-    subtitle: "GeyserMC packet translation, Floodgate authentication tokens, and why teenagers run better networks than enterprise startups.",
-    date: "2026-07-14",
-    year: "2026",
-    readingTime: "6 min read",
-    category: "Networks & Infrastructure",
-    mood: "Observant",
-    type: "field-note",
-    excerpt: "You want to understand distributed consensus, UDP protocol translation, and tick drift under heavy load? Stop reading textbook chapters on Paxos and run a hybrid Java/Bedrock Minecraft server for two hundred unpredictable kids.",
-    previewImagePrompt: "A dense network topology packet map displaying Bedrock RakNet UDP packets bridging into Java TCP Netty pipelines.",
-    chapters: [
-      { id: "the-protocol-chasm", title: "I. The Protocol Chasm" },
-      { id: "geyser-and-floodgate", title: "II. Geyser, Floodgate, and Packet Translation" },
-      { id: "the-relentless-20-tps", title: "III. The Relentless 20 TPS" }
-    ],
-    footnotes: [
-      { id: 1, text: "Minecraft Java communicates via TCP streams using Netty; Minecraft Bedrock uses RakNet over UDP with client-side prediction." },
-      { id: 2, text: "Floodgate circumvents standard online-mode UUID authentication by creating cryptographic Bedrock token handshakes." }
-    ],
-    content: {
-      leadParagraph: "In academic computer science, distributed systems are taught with sterile diagrams: Node A sends a SYN packet, Node B acknowledges, a Raft leader is elected. It feels clean. In reality, distributed systems are chaotic, messy, and prone to silent failures — a reality any sixteen-year-old running a Paper/Spigot server network understands on an instinctual level.",
-      sections: [
-        {
-          heading: "I. The Protocol Chasm",
-          body: [
-            "Consider what happens when you enable cross-play between Minecraft Java Edition and Minecraft Bedrock Edition. Java runs over TCP, expecting guaranteed in-order delivery and server-authoritative world states. Bedrock runs on mobile phones, tablets, and consoles over RakNet (UDP), relying heavily on optimistic client-side prediction.",
-            "You are attempting to make two fundamentally contradictory networking philosophies agree on where an arrow landed in a three-dimensional voxel grid."
-          ],
-          marginNote: "TCP wants certainty. UDP wants speed. Bridging them is an act of diplomatic acrobatics."
-        },
-        {
-          heading: "II. Geyser, Floodgate, and Packet Translation",
-          body: [
-            "This is where GeyserMC and Floodgate step in. Geyser acts as an on-the-fly protocol proxy, translating incoming RakNet packets into Java Netty byte buffers in real-time. If a Bedrock player looks at an inventory GUI, Geyser must forge fake window packets so the Java server doesn't disconnect them for packet spoofing.",
-            "Floodgate solves the authentication identity problem: it intercepts the login sequence, cryptographically validates the Xbox Live token, and synthesizes a legitimate UUID that the Java authentication pipeline accepts without crying foul."
-          ],
-          pullQuote: "Every network abstraction is a lie that works until packet loss exceeds eight percent."
-        },
-        {
-          heading: "III. The Relentless 20 TPS",
-          body: [
-            "A Minecraft server must process 20 ticks per second. That means you have exactly 50 milliseconds to calculate mob pathfinding, entity collisions, chunk loading, redstone circuits, and packet broadcasts.",
-            "If your tick time climbs to 52 milliseconds, you fall behind. If you drop to 14 TPS, players notice the latency in their sword swings. Managing this taught me more about thread contention, garbage collection pauses in the JVM, and network buffer saturation than any classroom lecture ever could."
-          ]
-        }
-      ]
-    }
-  },
-  {
-    id: "art-05",
+    id: "art-03",
     slug: "from-tangerang-to-tamkang-notes-on-language-and-relocation",
-    number: "05",
+    number: "03",
     title: "From Tangerang to Tamkang: Ink, Traditional Characters, and Relocation",
     subtitle: "Reflections on moving between archipelagos, studying 繁體字 in Tamsui, and carrying Tarakanita CC5+ values across seas.",
     date: "2026-04-12",
@@ -334,8 +229,8 @@ export const articles: Article[] = [
         {
           heading: "IV. What Anchors a Builder",
           body: [
-            "I keep making things I don't completely understand yet. Whether it is an MoE router, a cascaded dual-loop PID algorithm, or learning to slap an intricate 16th-note groove on a four-string bass, the joy has never been in being an expert.",
-            "The joy is in the friction of the unknown — in that quiet, late-night moment when the terminal prints clean output, the string rings true, and the machine comes alive."
+            "I keep making things I don't completely understand yet. Whether it is an MoE router, a cascaded dual-loop PID algorithm, or a custom Triton attention kernel, the joy has never been in being an expert.",
+            "The joy is in the friction of the unknown — in that quiet, late-night moment when the terminal prints clean output, the loop settles without overshoot, and the machine comes alive."
           ],
           marginNote: "Stay curious. Keep building things with your own hands."
         }

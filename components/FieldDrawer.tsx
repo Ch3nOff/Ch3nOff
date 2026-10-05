@@ -85,7 +85,7 @@ export default function FieldDrawer() {
         </div>
 
         <div className="pt-6 border-t border-ink-dark/15 dark:border-paper-100/15 flex items-center justify-between text-[10px] text-ink-muted">
-          <span>HINT: TYPE &apos;B&apos; ANYTIME FOR SLAP BASS FREQUENCY</span>
+          <span>HINT: PRESS &apos;?&apos; ANYTIME TO TOGGLE THIS DRAWER</span>
           <Link href="/manifesto" onClick={() => setIsOpen(false)} className="text-accent underline font-bold">
             READ MANIFESTO &rarr;
           </Link>
