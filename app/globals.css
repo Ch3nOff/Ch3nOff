@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-editorial: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-hand: 'Caveat', cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAF8F4;
+    color: #141312;
+  }
+
+  html.dark {
+    background-color: #0F0E0D;
+    color: #FAF8F4;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    overflow-x: hidden;
+    background-image: radial-gradient(rgba(20, 19, 18, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  html.dark body {
+    background-image: radial-gradient(rgba(250, 248, 244, 0.04) 1px, transparent 1px);
+  }
+
+  ::selection {
+    background-color: #D64527;
+    color: #FAF8F4;
+  }
+}
+
+/* Subtle print paper texture */
+.paper-grain {
+  background-color: #FAF8F4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+.dark .paper-grain {
+  background-color: #0F0E0D;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Vertical text utilities for editorial brutalism */
+.vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Editorial Drop Cap */
+.drop-cap::first-letter {
+  font-family: var(--font-editorial);
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.78;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 2px;
+  color: #D64527;
+  font-weight: 700;
+}
+
+/* Handwritten margin notes */
+.margin-hand {
+  font-family: var(--font-hand);
+  color: #D64527;
+  line-height: 1.25;
+}
+
+/* Accessibility: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
