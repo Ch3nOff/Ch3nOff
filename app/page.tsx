@@ -1,32 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
 import { personalData } from '@/data/personal';
-import { articles, Article } from '@/data/articles';
+import { articles } from '@/data/articles';
 import { artifacts } from '@/data/artifacts';
 import { fieldNotes } from '@/data/notes';
 import GenerativeCanvas from '@/components/GenerativeCanvas';
 import ArticleCard from '@/components/ArticleCard';
-import FloatingPreview from '@/components/FloatingPreview';
-import RubikVisualizer from '@/components/RubikVisualizer';
 import InteractiveFootnote from '@/components/InteractiveFootnote';
 
 export default function HomePage() {
-  const [activeArticle, setActiveArticle] = useState<Article | null>(null);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  const handleArticleHover = (article: Article | null, e?: React.MouseEvent) => {
-    setActiveArticle(article);
-    if (e) {
-      setCursorPos({ x: e.clientX, y: e.clientY });
-    }
-  };
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-36 pb-24">
-      {/* Floating preview for hovered articles */}
-      <FloatingPreview activeArticle={activeArticle} cursorPos={cursorPos} />
 
       {/* ───────────────────────────────────────────────────────────
           01. OPENING SPREAD / JOURNAL HERO (NOT A SAAS LANDING PAGE)
@@ -173,7 +158,7 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="text-right font-mono text-xs text-ink-muted">
-            TOTAL PIECES: [05] &bull; 2026 ARCHIVE
+            TOTAL PIECES: [04] &bull; 2026 ARCHIVE
           </div>
         </div>
 
@@ -183,14 +168,13 @@ export default function HomePage() {
             <ArticleCard
               key={article.id}
               article={article}
-              onHover={handleArticleHover}
             />
           ))}
         </div>
 
         <div className="flex items-center justify-between pt-4 font-mono text-xs">
           <span className="text-ink-muted">
-            &darr; Hover over any title to inspect architectural sketch
+            &darr; Every entry links to its full longform piece
           </span>
           <Link
             href="/archive"
@@ -231,7 +215,7 @@ export default function HomePage() {
                   <span className="text-accent font-bold uppercase">
                     [{art.category}]
                   </span>
-                  <span className="text-ink-muted border border-ink-dark/15 dark:border-paper-100/15 px-1.5 py-0.2">
+                  <span className="text-ink-muted border border-ink-dark/15 dark:border-paper-100/15 px-1.5 py-0.5">
                     {art.status}
                   </span>
                 </div>
@@ -300,59 +284,12 @@ export default function HomePage() {
       </section>
 
       {/* ───────────────────────────────────────────────────────────
-          04. THE SENSORY CORNER (SPATIAL COMBINATORICS & ACOUSTICS)
-         ─────────────────────────────────────────────────────────── */}
-      <section className="space-y-6 border border-ink-dark/20 dark:border-paper-100/20 p-6 sm:p-8 bg-paper-100/20 dark:bg-paper-900/20">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-ink-dark/15 dark:border-paper-100/15 pb-3 gap-2 font-mono">
-          <span className="text-xs uppercase tracking-widest text-accent font-bold">
-            [SECTION 03 // PHYSICAL HOBBIES &amp; SENSORY DISCIPLINE]
-          </span>
-          <span className="text-[10px] text-ink-muted">
-            SPEEDCUBING &bull; SLAP BASS &bull; DISTRIBUTED SERVERS &bull; CAPSA
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Rubik's Cube Scrambler Widget */}
-          <div className="lg:col-span-6 space-y-4">
-            <RubikVisualizer />
-            <p className="font-sans text-xs text-ink-dark/80 dark:text-paper-200/80 leading-relaxed italic">
-              &ldquo;Treating the 3x3 cube as a 43-quintillion state graph. Your fingers execute muscle memory while your eyes track the next cross edge before the current pair even seats.&rdquo;
-            </p>
-          </div>
-
-          {/* Slap Bass & Card Theory Breakdown */}
-          <div className="lg:col-span-6 space-y-5 font-mono text-xs">
-            <div className="border border-ink-dark/15 dark:border-paper-100/15 p-4 space-y-2 bg-paper-50 dark:bg-paper-900">
-              <div className="flex justify-between items-center text-[10px] text-accent font-bold">
-                <span>BASS GUITAR SLAP PHYSICS</span>
-                <span>118 BPM POCKET</span>
-              </div>
-              <p className="font-sans text-xs text-ink-dark/90 dark:text-paper-100/90 leading-relaxed">
-                Slap bass requires thumb recoil against the nickel-silver fret wire within 1.2ms. Press key <kbd className="px-1 py-0.5 bg-paper-200 dark:bg-paper-800 border font-mono">B</kbd> anywhere on the site to hear the Web Audio synthesized slap transient.
-              </p>
-            </div>
-
-            <div className="border border-ink-dark/15 dark:border-paper-100/15 p-4 space-y-2 bg-paper-50 dark:bg-paper-900">
-              <div className="flex justify-between items-center text-[10px] text-accent font-bold">
-                <span>CAPSA BANTING &amp; SUSUN (BIG TWO THEORY)</span>
-                <span>52-CARD ASYMMETRY</span>
-              </div>
-              <p className="font-sans text-xs text-ink-dark/90 dark:text-paper-100/90 leading-relaxed">
-                A study in tempo dictation and incomplete information. Knowing when to pass high Spades to force out royal combinations teaches more risk hedging than corporate spreadsheets.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ───────────────────────────────────────────────────────────
-          05. RECENT FIELD SCRATCHPAD (STREAM OF CONSCIOUSNESS)
+          04. RECENT FIELD SCRATCHPAD (STREAM OF CONSCIOUSNESS)
          ─────────────────────────────────────────────────────────── */}
       <section className="space-y-6">
         <div className="flex items-center justify-between border-b border-ink-dark/15 dark:border-paper-100/15 pb-2 font-mono">
           <span className="text-xs uppercase tracking-widest text-accent font-bold">
-            [SECTION 04 // LIVE FIELD NOTES &amp; MARGINALIA]
+            [SECTION 03 // LIVE FIELD NOTES &amp; MARGINALIA]
           </span>
           <Link href="/notes" className="text-xs underline text-ink-muted hover:text-accent">
             View All Notes &rarr;
@@ -381,7 +318,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────────────────────────────────────────────────────────
-          06. CLOSING MANIFESTO CALLOUT
+          05. CLOSING MANIFESTO CALLOUT
          ─────────────────────────────────────────────────────────── */}
       <section className="border-t-2 border-ink-dark dark:border-paper-50 pt-12 pb-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline font-mono">
         <div className="md:col-span-3 text-xs text-accent font-bold uppercase tracking-widest">
