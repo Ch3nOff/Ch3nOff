@@ -318,7 +318,36 @@ export default function HomePage() {
       </section>
 
       {/* ───────────────────────────────────────────────────────────
-          05. CLOSING MANIFESTO CALLOUT
+          05. RESEARCH LAB — SHARED EXPERIMENT CHAT TEASER
+         ─────────────────────────────────────────────────────────── */}
+      <section className="border border-accent/40 bg-accent-pale/40 dark:bg-paper-900/60 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div className="md:col-span-9 space-y-2">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-accent font-bold">
+            [SECTION 04 // OPEN BENCH FEED — POWERED BY SUPABASE]
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl text-ink-dark dark:text-paper-50">
+            The Research Lab: log experiments &amp; thoughts live, before they&apos;re pretty.
+          </h2>
+          <p className="font-sans text-sm text-ink-dark/80 dark:text-paper-100/80 max-w-2xl">
+            A shared chat-style bench where anyone can post an experiment protocol, a half-formed
+            theory or a failed run — tagged, searchable and reactable with{' '}
+            <span className="font-mono text-xs">⚗ replicate · ✦ insight · ? query</span>. Synced in
+            real time through Supabase Postgres + RLS.
+          </p>
+        </div>
+        <div className="md:col-span-3 flex md:justify-end">
+          <Link
+            href="/lab"
+            data-cursor="ENTER"
+            className="inline-block px-5 py-3 bg-accent text-white font-mono text-[11px] uppercase tracking-widest font-bold hover:bg-accent-hover transition-colors text-center"
+          >
+            Enter The Lab ⟶
+          </Link>
+        </div>
+      </section>
+
+      {/* ───────────────────────────────────────────────────────────
+          06. CLOSING MANIFESTO CALLOUT
          ─────────────────────────────────────────────────────────── */}
       <section className="border-t-2 border-ink-dark dark:border-paper-50 pt-12 pb-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline font-mono">
         <div className="md:col-span-3 text-xs text-accent font-bold uppercase tracking-widest">

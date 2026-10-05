@@ -69,6 +69,7 @@ export default function Navigation() {
     { name: 'MANIFESTO', href: '/manifesto' },
     { name: 'ARCHIVE', href: '/archive' },
     { name: 'NOTES', href: '/notes' },
+    { name: 'LAB', href: '/lab' },
   ];
 
   return (

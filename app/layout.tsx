@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import CustomCursor from '@/components/CustomCursor';
 import Navigation from '@/components/Navigation';
@@ -43,8 +44,10 @@ export default function RootLayout({
                 </div>
               </div>
 
-              {/* Direct links */}
               <div className="flex flex-wrap items-center gap-4 text-[10px] uppercase tracking-wider">
+                <Link href="/lab" data-cursor="LAB" className="text-accent font-bold underline">
+                  Research Lab [LIVE]
+                </Link>
                 <a
                   href="https://github.com/Ch3nOff"
                   target="_blank"
