@@ -103,24 +103,6 @@ export const artifacts: Artifact[] = [
     notes: "Explored during late-night server admin sessions, providing hands-on insight into asynchronous network protocols."
   },
   {
-    id: "project-synapse",
-    name: "Project: Synapse (2D AI RPG)",
-    category: "Game Systems",
-    status: "Active R&D",
-    year: "2026",
-    oneLiner: "Tactical 2D RPG engine featuring emergent AI NPC dialogues and modular spell-crafting state machines.",
-    description: "A mobile-first tactical RPG built with modular C# scripts and localized LLM prompt injectors. NPCs dynamically adjust their trade prices, allegiances, and combat strategies based on conversational history rather than static branching trees.",
-    techStack: ["Unity", "C#", "Custom State Machines", "Local SLM Dialogue Injector"],
-    links: {
-      github: "https://github.com/Ch3nOff",
-    },
-    metrics: [
-      { label: "Dialogue State Branching", value: "Dynamic / Open" },
-      { label: "Combat Turn Resolution", value: "<12ms" }
-    ],
-    notes: "Prototyped to test whether Small Language Models can act as organic game masters in resource-constrained environments."
-  },
-  {
     id: "latent-attention-moe",
     name: "Grouped-Subspace Latent MoE Routing",
     category: "AI & LLM",

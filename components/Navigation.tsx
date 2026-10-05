@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import BassSynth from './BassSynth';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +15,8 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 40);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -38,21 +38,34 @@ export default function Navigation() {
     return () => clearInterval(interval);
   }, []);
 
+  // Restore saved paper/ink preference on first load (no flash of wrong theme)
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('ch3noff-theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+        setIsDark(true);
+      }
+    } catch {
+      // localStorage unavailable (private mode) — stay on paper
+    }
+  }, []);
+
   const toggleDarkMode = () => {
     const html = document.documentElement;
-    if (html.classList.contains('dark')) {
-      html.classList.remove('dark');
-      setIsDark(false);
-    } else {
-      html.classList.add('dark');
-      setIsDark(true);
+    const nextDark = !html.classList.contains('dark');
+    html.classList.toggle('dark', nextDark);
+    setIsDark(nextDark);
+    try {
+      localStorage.setItem('ch3noff-theme', nextDark ? 'dark' : 'light');
+    } catch {
+      // ignore persistence failures
     }
   };
 
   const navItems = [
     { name: 'INDEX', href: '/' },
     { name: 'ESSAYS', href: '/#essays' },
-    { name: 'ARTIFACTS', href: '/artifacts' },
+    { name: 'ARTIFACTS', href: '/#artifacts' },
     { name: 'MANIFESTO', href: '/manifesto' },
     { name: 'ARCHIVE', href: '/archive' },
     { name: 'NOTES', href: '/notes' },
@@ -106,12 +119,8 @@ export default function Navigation() {
             })}
           </nav>
 
-          {/* Right Tools: Slap Bass + Time + Dark Mode + Secret Drawer hint */}
+          {/* Right Tools: Time + Dark Mode + Secret Drawer hint */}
           <div className="flex items-center gap-3 ml-auto">
-            <div className="hidden sm:block">
-              <BassSynth />
-            </div>
-
             <div className="hidden xl:block text-[9px] text-ink-muted tracking-widest font-mono">
               {currentTime || '21:35 CST'}
             </div>
