@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Matthew Chen (陳軍宇) — Personal Archive & Field Journal',
   description: 'Digital journal, visual diary, and experimental engineering archive of Matthew Chen (Ch3nOff). Small Language Models, dual-loop control systems, and tactile computing.',
   authors: [{ name: 'Matthew Chen (陳軍宇)', url: 'https://github.com/Ch3nOff' }],
-  keywords: ['Matthew Chen', 'Ch3nOff', 'Tamkang University', 'dual-loop-controller', 'Small Language Models', 'Slap Bass', 'Robotics'],
+  keywords: ['Matthew Chen', 'Ch3nOff', 'Tamkang University', 'dual-loop-controller', 'Small Language Models', 'Cascaded PID Control', 'Robotics'],
 };
 
 export default function RootLayout({

@@ -85,7 +85,7 @@ export default function HomePage() {
               >
                 cascaded feedback algorithms
               </InteractiveFootnote>
-              , slap funk grooves on a 4-string bass, and study Traditional Chinese characters in Tamsui.
+              , build BLE mesh emergency beacons, and study Traditional Chinese characters in Tamsui.
             </p>
 
             {/* Live Thinking Status & Quick Meta */}
@@ -99,7 +99,7 @@ export default function HomePage() {
               <div className="space-y-1">
                 <span className="text-[10px] text-accent tracking-widest uppercase">HARDWARE TESTBED:</span>
                 <p className="text-ink-dark dark:text-paper-100 font-medium">
-                  Intel Core Ultra + RTX 40/50 Series / ESP32 BLE Mesh Nodes / Custom Slap Bass Rig.
+                  Intel Core Ultra + RTX 40/50 Series / ESP32 BLE Mesh Nodes / Stepper + DC Encoder Test Rig.
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="text-right font-mono text-xs text-ink-muted">
-            TOTAL PIECES: [04] &bull; 2026 ARCHIVE
+            TOTAL PIECES: [03] &bull; 2026 ARCHIVE
           </div>
         </div>
 

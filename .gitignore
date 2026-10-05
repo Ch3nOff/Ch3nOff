@@ -1,1 +1,10 @@
+# Next.js build artifacts
+.next/
+
+# TypeScript incremental compilation cache
+*.tsbuildinfo
+# Dependencies
 node_modules/
+
+# Misc
+.DS_Store

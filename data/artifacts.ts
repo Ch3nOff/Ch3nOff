@@ -1,7 +1,7 @@
 export interface Artifact {
   id: string;
   name: string;
-  category: 'PyPI Package' | 'Hardware & IoT' | 'Computer Vision' | 'Game Systems' | 'AI & LLM';
+  category: 'PyPI Package' | 'Hardware & IoT' | 'AI & LLM';
   version?: string;
   status: 'Published' | 'Active R&D' | 'Archived' | 'Prototype';
   year: string;
@@ -61,46 +61,6 @@ export const artifacts: Artifact[] = [
       { label: "Battery Life", value: "48+ Hours" }
     ],
     notes: "Designed around the Tarakanita CC5+ principle of Compassion: technology engineered specifically for human crisis resilience."
-  },
-  {
-    id: "block-blast-solver",
-    name: "Block Blast CV & Heuristic Solver",
-    category: "Computer Vision",
-    status: "Active R&D",
-    year: "2026",
-    oneLiner: "Real-time game board state recognition and automated solver pipeline using OpenCV and Android Debug Bridge.",
-    description: "Captures live Android video frames over ADB, processes the 8x8 grid with morphological contour filters and color masking, and feeds board states to a minimax heuristic algorithm to compute optimal block clearing sequences at 60 FPS.",
-    techStack: ["Python", "OpenCV", "NumPy", "ADB (Android Debug Bridge)", "Heuristic Search"],
-    links: {
-      github: "https://github.com/Ch3nOff",
-      youtube: "https://youtube.com/@ch3ng4m1ngyt"
-    },
-    metrics: [
-      { label: "Frame Analysis Latency", value: "16.4ms" },
-      { label: "Board Recognition Accuracy", value: "99.8%" },
-      { label: "Max Cleared Score", value: "142,000+" }
-    ],
-    notes: "Automated real-time ADB touch tap injection directly simulating human finger drag arcs."
-  },
-  {
-    id: "minecraft-crossplay-infra",
-    name: "Heterogeneous Minecraft Cross-Play Network",
-    category: "Game Systems",
-    status: "Published",
-    year: "2025-2026",
-    oneLiner: "High-throughput Paper/Spigot server architecture enabling zero-desync cross-play between Java and Bedrock clients.",
-    description: "Configured custom network proxy routing utilizing GeyserMC, Floodgate, and optimized UDP packet compression tunnels. Features custom server-side tick scheduler monitoring to maintain a locked 20.0 TPS under concurrent player load.",
-    techStack: ["Java / JVM", "PaperMC", "Spigot", "GeyserMC", "Floodgate", "UDP / RakNet"],
-    links: {
-      github: "https://github.com/Ch3nOff",
-      youtube: "https://youtube.com/@ch3ng4m1ngyt"
-    },
-    metrics: [
-      { label: "Server Tick Rate", value: "20.0 TPS" },
-      { label: "Cross-Play Desync", value: "0 Detected" },
-      { label: "Packet Compression", value: "32% Bandwidth Saved" }
-    ],
-    notes: "Explored during late-night server admin sessions, providing hands-on insight into asynchronous network protocols."
   },
   {
     id: "latent-attention-moe",

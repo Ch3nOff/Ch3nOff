@@ -81,35 +81,15 @@ export const personalData: PersonalData = {
       subtitle: "Project PENJAGA-MOBILE & Embedded Nodes",
       specs: ["ESP32 / ATTiny85", "Bluetooth Low Energy Mesh", "Zero-Internet Emergency Protocol"],
       description: "Off-grid disaster communication architecture using hop-based BLE packet dissemination and low-power sensory nodes designed for chaotic real-world physical constraints."
-    },
-    {
-      title: "Computer Vision Game Automation",
-      subtitle: "Block Blast Solver via OpenCV + ADB",
-      specs: ["Python 3.11", "OpenCV Contours", "Real-Time Android Debug Bridge"],
-      description: "Real-time screenshot buffer capture, matrix cell segmenter, and heuristic backtracking combinatorial solver for perfect tile placements at 60 FPS."
     }
   ],
   hobbies: [
     {
-      name: "Slap Bass Guitar",
-      category: "Acoustics & Rhythm",
-      obsession: "Thumb thumps, popping octave resonance, and 16th-note ghost note spacing",
-      metric: "118 BPM funk pocket",
-      description: "Bass is not melody; it's acoustic physics. Slapping requires immediate mechanical leverage — striking the string against the fretboard so the metallic ring anchors the kick drum."
-    },
-    {
-      name: "3x3 Rubik's Cube Speedsolving",
-      category: "Spatial Combinatorics",
-      obsession: "CFOP inspection lookahead, non-pre-rotation F2L insertion pairs, PLL recognition",
-      metric: "Sub-16s PB",
-      description: "Treating the cube as a 43-quintillion state graph. Your fingers execute muscle memory while your eyes track the next cross edge before the current pair even seats."
-    },
-    {
-      name: "Minecraft Network Architecture",
-      category: "Distributed State Systems",
-      obsession: "Spigot/Paper packet compression, GeyserMC protocol translation, tick synchronization",
-      metric: "Zero-tick drift cross-play",
-      description: "Bridging Bedrock and Java editions across custom tunnels. Dealing with protocol byte mismatches teaches more about network transport than any university homework."
+      name: "Robotics Bench Control Tuning",
+      category: "Applied Dynamics",
+      obsession: "Step-response settling time, encoder noise floors, and cascaded loop phase margins",
+      metric: "<0.08ms tick overhead",
+      description: "Tuning dual-loop-controller against real stepper rigs and DC motor encoders is where the math meets reality — every microsecond of jitter shows up as mechanical resonance on the bench."
     },
     {
       name: "Card Strategy (Capsa Banting & Susun)",
